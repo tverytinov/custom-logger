@@ -27,7 +27,7 @@ type Logger struct {
 }
 
 func NewLogger(logLevel string) Logger {
-	decor := log.Lshortfile | log.Ltime | log.Ldate | log.Lmsgprefix
+	decor := log.Lshortfile | log.LstdFlags | log.Lmsgprefix
 
 	logger := log.New(os.Stdout, " ", decor)
 
